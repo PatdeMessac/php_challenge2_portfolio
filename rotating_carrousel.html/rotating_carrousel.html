@@ -3,32 +3,59 @@
 <html>
 <head>
   <title>rotating_</title>
+  <!--http://www.the-art-of-web.com/css/3d-transforms/-->
 </head>
 <body>
-rotating carrousel
-
+<h1>rotating carrousel</h1>
+<br >
+<!--
+<div id="stage" style="background: lime;/*rgba(0,0,0,0.5);*/">
+<p id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: #fff;">PORT OF OLIO</p>
+</div>
+-->
+<div id="stage" style="padding-left: 180px; height: 160px;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;" src="images/coque.png" width="200" height="160" alt="">
+<img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;" src="images/beach2.jpg" width="213" height="160" alt="">
+<img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;" src="images/plane2.png" width="240" height="160" alt="">
+<img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;" src="images/beach4.jpg" width="213" height="160" alt="">
+<img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;" src="images/train.png" width="238" height="160" alt="">
+</div>
+</div>
 <style type="text/css">
-
-  /* WebKit and Opera browsers */
-  @-webkit-keyframes spinner {
-    from { -webkit-transform: rotateY(0deg);    }
-    to   { -webkit-transform: rotateY(-360deg); }
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotateY(0deg);
   }
-
-  /* all other browsers */
-  @keyframes spinner {
-    from {
-      -moz-transform: rotateY(0deg);
-      -ms-transform: rotateY(0deg);
-      transform: rotateY(0deg);
-    }
-    to {
-      -moz-transform: rotateY(-360deg);
-      -ms-transform: rotateY(-360deg);
-      transform: rotateY(-360deg);
-    }
+  to {
+    -webkit-transform: rotateY(-360deg);
   }
+}
+
+#stage {
+  margin: 1em auto;
+  -webkit-perspective: 1200px;
+}
+
+#spinner {
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  -webkit-transform-style: preserve-3d;
+}
+#spinner:hover {
+  -webkit-animation-play-state: paused;
+}
+
+#spinner img {
+  position: absolute;
+  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.8);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
 
 </style>
+
 </body>
 </html>
