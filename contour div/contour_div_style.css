@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background-color: #3B5998;
+  background-color: #4c66a4;
   font-family: 'Slabo 27px', arial, sans-serif;
 }
 .menu {
@@ -31,8 +31,9 @@ body {
   display: inline-block;
 }
 .menu__link {
+  background-color: lime;
   font-size: 4vw;
-  color: #D1C4E9;
+  color: cyan;/*#D1C4E9;*/
   text-decoration: none;
   text-transform: capitalize;
   padding: .2em 1.5em;
@@ -52,10 +53,10 @@ body {
   height: .05em;
   position: absolute;
   left: 0;
-  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+          /*transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+          transition: transform 2s ease-out, opacity 2s ease-out;*/
+          transition: transform 2s ease-out, opacity 2s ease-out, -webkit-transform 2s ease-out;
 }
 .menu__link:before {
   top: 0;
@@ -69,7 +70,7 @@ body {
 }
 .menu__link:hover,
 .menu__link:focus {
-  color: #fff;
+  color: #f0f;/*#fff*/
   outline: none;
 }
 .menu__link:hover:before,
@@ -80,10 +81,10 @@ body {
 .menu__link:focus .menu__label:before,
 .menu__link:hover .menu__label:after,
 .menu__link:focus .menu__label:after {
-  background-color: #fff;
+  background-color: #000;                       /*couleur du contour*/
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  opacity: 1;
+  opacity: 0.5;                                 /*donne un effet degradé au contour, à opacity : 1 : noir complet*/
 }
 .menu__link .menu__label:before,
 .menu__link .menu__label:after {
@@ -93,10 +94,10 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+          transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+          transition: transform 2s ease-out, opacity 2s ease-out;
+          transition: transform 2s ease-out, opacity 2s ease-out, -webkit-transform 2s ease-out;
 }
 .menu__link .menu__label:before {
   left: 0;
