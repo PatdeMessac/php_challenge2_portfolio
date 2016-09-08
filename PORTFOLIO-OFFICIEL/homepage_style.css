@@ -3,6 +3,17 @@
 }
 
 
+/***************************/
+/*********SECONDE PARTIE****/
+/****************************/
+
+.DEUX {
+  /*background-color: #4c66a4;*/
+  font-family: 'Slabo 27px', arial, sans-serif;
+}
+
+
+
 
 
 /*********************************************/
@@ -24,28 +35,33 @@
   width: 30px;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  transition: width 0.7s ease-out;  
-  -webkit-transition: width 0.7s ease-out;  
+  -moz-transition: width 0.7s ease-out;  
+  -webkit-transition: width 0.7s ease-out;
+    
 }
 
-.menu > li:nth-child(1){ background : cyan; }
+.menu > li:nth-child(1){ background : black; }
 
-.menu > li:nth-child(2){ background : lime; }
+.menu > li:nth-child(2){ background : grey; }
 
-.menu > li:nth-child(3){ background : fuchsia; }
+.menu > li:nth-child(3){ background : brown; }
 
 .menu > li:hover{
+ 
   width: 20%;
 }
 a{
   text-decoration: none;
 }
 
-.menu > li:nth-child(1) a:hover{color : green; text-align: center;font-size: 50px;
-}
-
 h1: hover{ text-align: center;
 text-decoration: none;
+}
+.menu > li:nth-child(1) span:hover{background : red; color : green; text-align: center;font-size: 50px;
+}
+.menu > li:nth-child(2) span:hover{color : green; text-align: center;font-size: 50px;
+}
+.menu > li:nth-child(3) span:hover{color : green; text-align: center;font-size: 50px;
 }
 
 
@@ -55,18 +71,14 @@ text-decoration: none;
 /*******************************************/
 
 
-/** {
+/* {
   margin: 0;
   padding: 0;
-}
-body {
-  background-color: #4c66a4;
-  font-family: 'Slabo 27px', arial, sans-serif;
-}
-*/
+}*/
+
 
 .menu {
-  width: 100%;
+  width: 95%;
   height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,8 +125,8 @@ body {
   position: absolute;
   left: 0;
   -webkit-transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
-          /*transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
-          transition: transform 2s ease-out, opacity 2s ease-out;*/
+          transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+          transition: transform 2s ease-out, opacity 2s ease-out;
           transition: transform 2s ease-out, opacity 2s ease-out, -webkit-transform 2s ease-out;
 }
 .menu__link:before {
@@ -129,8 +141,8 @@ body {
 }
 .menu__link:hover,
 .menu__link:focus {
-  color: #f0f;/*#fff*/
-  outline: none;
+  color: #fff;/*#fff*/
+  outline: none;            /*--------Attention : gestion des class: risq conflit item, link, label----*/
 }
 .menu__link:hover:before,
 .menu__link:focus:before,
@@ -169,6 +181,10 @@ body {
           transform: translate3d(0%, 100%, 0);
 }
 
+
+
+
+
 /************************************/
 /********* class "TROIS" = CARROUSEL*/
 /************************************/
@@ -203,34 +219,34 @@ padding-top: 150px;
 
 #spinner{
 -webkit-transform-origin: 50% 0 0;   /*distance de rotation, centre de rotation stage1*/ 
-        -moz-transform-origin: 50% 0 0;
+        transform-origin: 50% 0 0;
 }
 
 
 #spinner .img1{ 
   -webkit-transform: rotateY(0deg) translateX(180px);
-          -moz-transform: rotateY(0deg) translateX(180px); 
+          transform: rotateY(0deg) translateX(180px); 
   padding: 0 0 0 160px;
 }
 
 #spinner .img2{
  -webkit-transform: rotateY(-72deg) translateX(180px);
-          -moz-transform: rotateY(-72deg) translateX(180px);
+          transform: rotateY(-72deg) translateX(180px);
   padding: 0 0 0 147px;
 }
 #spinner .img3{
  -webkit-transform: rotateY(-144deg) translateX(180px);
-          -moz-transform: rotateY(-144deg) translateX(180px); 
+          transform: rotateY(-144deg) translateX(180px); 
  padding: 0 0 0 120px;
 }
 #spinner .img4{
   -webkit-transform: rotateY(-216deg) translateX(180px); 
-          -moz-transform: rotateY(-216deg) translateX(180px); 
+          transform: rotateY(-216deg) translateX(180px); 
   padding: 0 0 0 147px;
 }
 #spinner .img5{ 
   -webkit-transform: rotateY(-288deg) translateX(180px);
-            -moz-transform: rotateY(-288deg) translateX(180px); 
+        transform: rotateY(-288deg) translateX(180px); 
   padding: 0 0 0 122px;
 }
 
@@ -238,35 +254,35 @@ padding-top: 150px;
 @-webkit-keyframes spinner {
   from {
     -webkit-transform: rotateY(0deg);
-            -moz-transform: rotateY(0deg);
+            -transform: rotateY(0deg);
   }
   to {
     -webkit-transform: rotateY(-360deg);
-            -moz-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
   }
 }
 
 #stage1, #stage2 {
   margin: 1em auto;
   -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
+  perspective: 1200px;
 }
 
 #spinner {
   -webkit-animation-name: spinner;
-  -moz-animation-name: spinner;
+    animation-name: spinner;
   -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
   -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
+    animation-duration: 6s;
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 #spinner:hover {
   -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
+    animation-play-state: paused;          /*https://developer.mozilla.org/fr/docs/Web/CSS/animation-play-state*/
 }
 
 #spinner .img1, .img2, .img3, .img4, .img5 {
@@ -293,7 +309,8 @@ body
  margin:0 auto;
  padding:0px;
  font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
- background: linear-gradient(white, #D3D8E8);
+ background-attachment : fixed;
+ background: linear-gradient( 0deg, blue, green 40%, red );
 }
 
 
@@ -575,6 +592,8 @@ body
 
 /*--------------------*/
 /*AJOUT CSS  CUBE GRID*/
+/*effet dalles carrées
+/*fonctionne sous firefox ET Chrome
 /*--------------------*/
 
 
@@ -584,25 +603,26 @@ body
   width: 140px;
   height: 140px;
   margin: 100px auto;
+  background-image: url(images/img1.png);
 }
 
 .sk-cube-grid .sk-cube {
   width: 33%;
   height: 33%;
-  background-color: #4C66A4;
+  background-color: #4C66A4; /*facebook color*/
   float: left;
-  -webkit-animation: sk-cubeGridScaleDelay 3s infinite ease-in-out;
-          animation: sk-cubeGridScaleDelay 3s infinite ease-in-out; 
+  -webkit-animation: sk-cubeGridScaleDelay 5s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 10s infinite ease-in-out; 
 }
 .sk-cube-grid .sk-cube1 {
-  background-color: red;
+  /*background-image: url(images/img1.png);*/
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s; }
 
 .sk-cube-grid .sk-cube2 {
   
-  -webkit-animation-delay: 21s;
-          animation-delay: 21s; }
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
 
 
 .sk-cube-grid .sk-cube3 {
@@ -617,9 +637,15 @@ body
 .sk-cube-grid .sk-cube6 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s; }
+
 .sk-cube-grid .sk-cube7 {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
+          animation-delay: 0.2s; 
+
+        }
+
+
+
 .sk-cube-grid .sk-cube8 {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s; }
@@ -646,3 +672,8 @@ body
             transform: scale3D(0, 0, 1);
   } 
 }
+
+
+
+
+
