@@ -1,5 +1,9 @@
 .UN {
   text-align: left;
+  /*background-color: grey;*/
+  background-image: radial-gradient(circle at center, white, grey);
+  opacity : 0.9;
+padding-bottom: 50px;
 }
 
 
@@ -8,7 +12,9 @@
 /****************************/
 
 .DEUX {
-  /*background-color: #4c66a4;*/
+  /*background-color: #4c66a4;
+  opacity: 0.5;*/
+  
   font-family: 'Slabo 27px', arial, sans-serif;
 }
 
@@ -23,8 +29,19 @@
 .menu{
   width: 100%;
   height: 200px;
-  border: 1px solid #ddd;
+  border: 10px solid #ddd;
+
+border-width: 3px; 
+border-style: solid;
+
+-webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+-webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+-moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+-o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%; 
+border-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+
   font: 14px Arial;
+  color : black;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -32,7 +49,7 @@
 }
 
 .menu > li{
-  width: 30px;
+  width: 10px;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
   -moz-transition: width 0.7s ease-out;  
@@ -44,12 +61,14 @@
 
 .menu > li:nth-child(2){ background : grey; }
 
-.menu > li:nth-child(3){ background : brown; }
+.menu > li:nth-child(3){ background : black; }
 
 .menu > li:hover{
  
   width: 20%;
 }
+
+
 a{
   text-decoration: none;
 }
@@ -57,11 +76,11 @@ a{
 h1: hover{ text-align: center;
 text-decoration: none;
 }
-.menu > li:nth-child(1) span:hover{background : red; color : green; text-align: center;font-size: 50px;
+.menu > li:nth-child(1) :hover{color : green; text-align: center;font-size: 50px;
 }
-.menu > li:nth-child(2) span:hover{color : green; text-align: center;font-size: 50px;
+.menu > li:nth-child(2) :hover{color : green; text-align: center;font-size: 50px;
 }
-.menu > li:nth-child(3) span:hover{color : green; text-align: center;font-size: 50px;
+.menu > li:nth-child(3) :hover{color : green; text-align: center;font-size: 50px;
 }
 
 
@@ -78,20 +97,21 @@ text-decoration: none;
 
 
 .menu {
-  width: 95%;
-  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
+
 .menu__item {
   list-style: none;
   -webkit-transform: translateZ(0);
@@ -102,8 +122,9 @@ text-decoration: none;
   display: inline-block;
 }
 .menu__link {
-  background-color: lime;
-  font-size: 4vw;
+  background-image: url(images/img2.png);
+  background-size: cover;
+  font-size: 3vw;
   color: cyan;/*#D1C4E9;*/
   text-decoration: none;
   text-transform: capitalize;
@@ -126,6 +147,7 @@ text-decoration: none;
   left: 0;
   -webkit-transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
           transition: opacity 2s ease-out, -webkit-transform 2s ease-out;
+
           transition: transform 2s ease-out, opacity 2s ease-out;
           transition: transform 2s ease-out, opacity 2s ease-out, -webkit-transform 2s ease-out;
 }
@@ -141,9 +163,11 @@ text-decoration: none;
 }
 .menu__link:hover,
 .menu__link:focus {
-  color: #fff;/*#fff*/
+  color: white;/*#fff*/ /*ne fonctionne pas*/
   outline: none;            /*--------Attention : gestion des class: risq conflit item, link, label----*/
 }
+
+
 .menu__link:hover:before,
 .menu__link:focus:before,
 .menu__link:hover:after,
@@ -152,11 +176,13 @@ text-decoration: none;
 .menu__link:focus .menu__label:before,
 .menu__link:hover .menu__label:after,
 .menu__link:focus .menu__label:after {
-  background-color: #000;                       /*couleur du contour*/
+  background-color: white;                       /*couleur du contour*/
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  opacity: 0.5;                                 /*donne un effet degradé au contour, à opacity : 1 : noir complet*/
+  opacity: 0.8;                                 /*donne un effet degradé au contour, à opacity : 1 : noir complet*/
 }
+
+
 .menu__link .menu__label:before,
 .menu__link .menu__label:after {
   content: "";
@@ -288,7 +314,7 @@ padding-top: 150px;
 #spinner .img1, .img2, .img3, .img4, .img5 {
   position: absolute;
   border: 1px solid #ccc;
-  background: rgba(255,255,255,0.8);
+  /*background: rgba(255,255,255,0.8);*/
   box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -538,7 +564,7 @@ body
  float:left;
  margin-top:130px;
  min-width:995px;
- background-color:white;
+ /*background-color:white;*/
  text-align:left;
 }
 #footer1
@@ -602,8 +628,9 @@ body
 .sk-cube-grid {
   width: 140px;
   height: 140px;
-  margin: 100px auto;
-  background-image: url(images/img1.png);
+  margin: 10px auto;
+  background-image: url(images/slim.png);
+  background-size: cover;
 }
 
 .sk-cube-grid .sk-cube {
@@ -615,15 +642,12 @@ body
           animation: sk-cubeGridScaleDelay 10s infinite ease-in-out; 
 }
 .sk-cube-grid .sk-cube1 {
-  /*background-image: url(images/img1.png);*/
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s; }
 
-.sk-cube-grid .sk-cube2 {
-  
+.sk-cube-grid .sk-cube2 {  
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s; }
-
 
 .sk-cube-grid .sk-cube3 {
   -webkit-animation-delay: 0.5s;
@@ -640,11 +664,7 @@ body
 
 .sk-cube-grid .sk-cube7 {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; 
-
-        }
-
-
+          animation-delay: 0.2s; }
 
 .sk-cube-grid .sk-cube8 {
   -webkit-animation-delay: 0.3s;
