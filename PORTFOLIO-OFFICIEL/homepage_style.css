@@ -7,6 +7,8 @@ body
  font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
  background: linear-gradient(white, #D3D8E8);
 }
+
+
 #header_wrapper
 {
  width:100%;
@@ -229,7 +231,7 @@ body
  width:100%;
  clear:both;
  float:left;
- margin-top:30px;
+ margin-top:130px;
  min-width:995px;
  background-color:white;
  text-align:left;
