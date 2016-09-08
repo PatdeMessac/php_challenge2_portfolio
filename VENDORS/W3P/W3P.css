@@ -1,0 +1,21 @@
+body a{
+	color: lime;
+	text-decoration: none;
+}
+
+h1
+{margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: fuchsia;
+	text-shadow: 10px 10px 5px white;
+	text-align: center;
+	box-shadow: 2px 2px 2px blue;
+}
+
+a:hover{
+	color: red;
+	font-size: 40px;
+	color : cyan;
+
+}

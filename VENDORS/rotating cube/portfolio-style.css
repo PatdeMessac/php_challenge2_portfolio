@@ -1,0 +1,264 @@
+body{
+  width: 100%;
+  background-image: url(images/img2.png);
+  background-position: ;
+background-size: 75%;
+  background-repeat: no-repeat;
+
+  
+}
+/*http://www.shanidkv.com/blog/flexbox-layout*/
+
+
+/*****************/
+/*NAVBAR flexible*/
+/*****************/
+
+.col-md-4 .accueil{
+  background-image: url('images/img1.png');
+}
+
+
+
+
+
+.flex{
+
+	margin-top : 50px;
+	width: 100%;
+	height: 400px;
+	border: 1px solid #ddd;
+	font: 14px Arial;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+
+.flex > div{
+	width: 30px;
+	flex: 1 1 auto;
+	-webkit-flex: 1 1 auto;
+	transition: width 0.7s ease-out;	
+	-webkit-transition: width 0.7s ease-out;	
+}
+
+.flex > div:nth-child(1){ background-color : black; }
+
+.flex > div:nth-child(2){ background : red; }
+
+.flex > div:nth-child(3){ background : black; }
+
+.flex > div:hover{
+	width: 20%;
+}
+a{
+	text-decoration: none;
+}
+
+.flex > div:nth-child(1) a:hover{color : cyan;font-size: 50px;}
+
+.flex > div:nth-child(2) a:hover{color : lime;font-size: 50px;}
+
+.flex > div:nth-child(3) a:hover{color : fuchsia;font-size: 50px;}
+
+h1: hover{ text-align: center;
+text-decoration: none;
+}
+
+.face2 p{
+	font-size: 15px;
+}
+/****************************/
+/*BACKGROUND COLOR ANIMATION*/
+/****************************/
+
+body
+{
+ text-align:center;
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ animation: back_animate 25s infinite linear;
+}
+@keyframes back_animate 
+{
+ 10% {background-color:#FF8000;}
+ 20%{background-color:#ACFA58;}
+ 30%{background-color:#298A08;}
+ 40%{background-color:#81F7D8;}
+ 50%{background-color:#088A68;}
+ 60%{background-color:#5882FA;}
+ 70%{background-color:#0B2161;}
+ 80%{background-color:#BE81F7;}
+ 90%{background-color:#170B3B;}
+ 100%{background-color:#424242;}
+}
+
+/****************/
+/*ANIMATION CUBE*/
+/****************/
+
+/*http://www.the-art-of-web.com/css/3d-transforms/*/
+/*
+#stage {
+  margin: 1em auto;
+  -webkit-perspective: 1200px;
+}
+*/
+
+
+#spinner {
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  -webkit-transform-style: preserve-3d;
+}
+
+
+.cubespinner:hover {
+  -webkit-animation-play-state: paused;
+}
+
+/*#spinner img {
+  position: absolute;
+  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.8);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+*/
+
+  @-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16%      { -webkit-transform: rotateY(-90deg);                           }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+    50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+    66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+    83%      { -webkit-transform: rotateX(90deg);                            }
+  }
+
+
+  @keyframes spincube {
+    from,to {
+      -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      -moz-transform: rotateY(-90deg);
+      -ms-transform: rotateY(-90deg);
+      transform: rotateY(-90deg);
+    }
+    33% {
+      -moz-transform: rotateY(-90deg) rotateZ(90deg);
+      -ms-transform: rotateY(-90deg) rotateZ(90deg);
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+      -moz-transform: rotateY(-180deg) rotateZ(90deg);
+      -ms-transform: rotateY(-180deg) rotateZ(90deg);
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      -moz-transform: rotateY(-270deg) rotateX(90deg);
+      -ms-transform: rotateY(-270deg) rotateX(90deg);
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      -moz-transform: rotateX(90deg);
+      -ms-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+    }
+  }
+
+  .cubespinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: 60px 60px 0;
+    -moz-transform-origin: 60px 60px 0;
+    -ms-transform-origin: 60px 60px 0;
+    transform-origin: 60px 60px 0;
+  }
+
+  .cubespinner div {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    line-height: 120px;
+    text-align: center;
+    font-size: 100px;
+  }
+
+  .cubespinner .face1 {
+    -webkit-transform: translateZ(60px);
+    -moz-transform: translateZ(60px);
+    -ms-transform: translateZ(60px);
+    transform: translateZ(60px);
+  }
+  .cubespinner .face2 {
+    -webkit-transform: rotateY(90deg) translateZ(60px);
+    -moz-transform: rotateY(90deg) translateZ(60px);
+    -ms-transform: rotateY(90deg) translateZ(60px);
+    transform: rotateY(90deg) translateZ(60px);
+  }
+  .cubespinner .face3 {
+    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  }
+  .cubespinner .face4 {
+    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  }
+  .cubespinner .face5 {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  }
+  .cubespinner .face6 {
+    -webkit-transform: rotateX(-90deg) translateZ(60px);
+    -moz-transform: rotateX(-90deg) translateZ(60px);
+    -ms-transform: rotateX(-90deg) translateZ(60px);
+    transform: rotateX(-90deg) translateZ(60px);
+  }
+
+.face2, .face4, .face6{
+  opacity: 0.6;
+}
+
+
+/****************************************************************/
+/*http://www.mg-otterson.de/fileadmin/show/transition/cube.html#*/
+/*faces avec transition*/
+/****************************************************************/
+
+
+
+
+
+/***************************************************************/
+/*http://www.the-art-of-web.com/javascript/animate-curved-path/*/
+/***************************************************************/
