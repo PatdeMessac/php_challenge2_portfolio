@@ -29,16 +29,33 @@
   from {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
+  
   }
   to {
-    -webkit-transform: rotateY(-360deg);
-            transform: rotateY(-360deg);
-  }
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+    }
 }
 
-#stage {
+
+
+  @-webkit-keyframes  spinner2 {
+  from {
+-webkit-transform: rotateX(-60deg);
+        transform: rotateX(-60deg);
+
+  }
+  to {
+  -webkit-transform: rotateX(60deg);
+          transform: rotateX(60deg);
+            }
+}
+
+
+
+#stage {text-align: center;
   margin: 1em auto;
-  -webkit-perspective: 1200px;
+  -webkit-perspective: 12000px;
 }
 
 #spinner {
@@ -49,7 +66,8 @@
   -webkit-transform-style: preserve-3d;
 }
 #spinner:hover {
-  -webkit-animation-play-state: paused;
+  -webkit-animation-name: spinner2;
+  
   
 }
 
