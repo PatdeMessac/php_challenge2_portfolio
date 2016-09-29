@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS : affichage modal plus transition basique</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<meta charset="utf-8">
+<style> 
+    div {color: white;
+      overflow: hidden;/*sur la div, pas sur le parapgraphe*/
+        width: 100px;
+        height: 100px;
+        background:linear-gradient(to left, black, grey, black);
+        -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
+        transition: width 1s, height 1s;
+        border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+    div:hover {overflow: visible;
+        width: 100%;
+        height: 400px;
+      
+    }
+    .text p {border-radius: 10px;
+       padding-top: 25px;
+      
+      text-align: center;
+      font-size: 15px;
+      
+    }
+    .text p:hover {
+      font-size: 25px;
+        
+  }
+h2, .w3-btn{
+  border-radius: 10px;
+  font-size : 10px;
+
+}
+.w3-btn, h2:hover{
+  font-size: 25px;
+
+}
+.w3-closebtn{color:white;
+width: 150px;
+height:150px;
+background:linear-gradient(to left, black, grey, black);
+border-radius: 10px;
+text-align: center;
+padding-top:30px;
+color:red;
+margin-left: 100px;
+margin-right: 0px;
+}
+.w3-closebtn:hover{
+  color:white;
+overflow: visible;
+background:linear-gradient(to left, grey, black, grey);
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="w3-container">
+  <h2>useless, over and hover and</h2>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn"><p style ="text-align:left; margin-top:0;">Hover<br>at your own risk <br>and now ladies and gentlemen : click me ! </p></button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn" >emergency <br> exit</span>
+        
+
+<div class="text">
+
+        <p>Texte 1 <br><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+        
+        <p>Texte 2 <br>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+            
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+  
+<html>
+    <head>
+        <style>
+            #target{
+                display: block;
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        </style>
+        <script type="text/javascript">
+        function init(){
+            document.getElementById('target').style.marginLeft = '0px'
+        }
+         
+        function cacher(objet){
+            if(objet.style.display == 'none'){
+                objet.style.display = 'block'
+            }
+            else{
+                objet.style.display = 'none'
+            }
+        }
+         
+        function deplacer(objet){
+            objet.style.marginLeft = (parseInt(objet.style.marginLeft.split('px')[0]) + 100) + 'px'
+             
+        }
+  
+        </script>
+    </head>
+    <body onload="init()">
+        <button onclick="cacher(document.getElementById('target'))">Cacher</button><button onclick="deplacer(document.getElementById('target'))">Déplacer</button>
+        <div id="target"></div>
+    </body>
+</html>

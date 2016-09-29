@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>courbes background</title>
+<style type="text/css">
+	body {
+  /*background:#f9f9f9;  __________________________cadre*/
+  background:linear-gradient(to bottom, black, red);
+  min-height:100vh;
+}
+#container {
+  min-height:250px;
+/*div haut*/
+  background:linear-gradient(to right, black, white);}
+.cls-1,
+.cls-2 {
+fill:black;  
+
+}
+.cls-2 {
+  
+  opacity:0.7;
+}
+#curve1 {
+  display:block;
+  background:linear-gradient(to left, white, black);
+}
+.content {
+  background:linear-gradient(to bottom, black, red);/*div bas*/
+  width:100%;
+  height:500px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="container">
+
+</div>
+  <svg id="curve1" data-name="Curve 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120.71"><defs></defs><title>curve</title><path class="cls-1" d="M0,150H900V75A913.58,913.58,0,0,0,676,48.13c-186.37,1.1-269.41,60.21-452.17,58.7C160.9,106.3,85.45,98.59,0,75v75Z" transform="translate(0 -29.29)"/><path class="cls-2" d="M0,150H900V65C837.77,49.7,765,35.3,678.9,35.81,492.53,36.91,416.73,76.52,234,75,171,74.48,85.45,52.88,0,29.29V150Z" transform="translate(0 -29.29)"/></svg>
+<div class="content">
+
+</div>
+</body>
+</html>

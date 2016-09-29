@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>background shadow degradé</title>
+</head>
+<body>
+<div class="left">
+<div class="outer">
+    <div class="inner">
+        <div class="content">
+        </div>
+    </div>
+</div>
+</div>
+<div class="right">
+<div class="outer">
+    <div class="inner">
+        <div class="content">
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<style>
+.right{
+    float: left;
+    margin-top: 100px;
+    margin-left: 33%;
+}
+
+.left{
+margin-top: 100px;
+    margin-right: 33%;
+    float: right;}
+
+.outer {
+    box-sizing: border-box;
+    padding: 25px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0px 0px 10px 10px #444 inset;
+    border-radius: 50%;
+    background: linear-gradient(60deg, black, white, black);
+}
+.outer::before {
+    content: "";
+    display: block;
+    position: relative;
+    left: -26px;
+    top: -26px;
+    height: 202px;
+    width: 202px;
+    border-radius: 50%;
+    border: 3px solid #444;
+    box-sizing: border-box;
+}
+.inner {
+    position:relative;
+    top: -196px;
+    left: 2px;
+    border-radius: 50%;
+    background: linear-gradient(30deg, black 30%, grey , black);
+    padding: 2px;
+    height: 140px;
+    width: 140px;
+    box-shadow: 0px 0px 30px -5px black;
+}
+.content {
+    height: 95%;
+    width: 95%;
+    background: #444;
+    border-radius: 50%;
+    border: 1px solid black;
+    /*background: radial-gradient(ellipse, grey,red, black, red, grey);*/
+    animation: back_animate 25s infinite linear;
+}
+@keyframes back_animate 
+{
+ 10% {background-color:#FF8000;}
+ 20%{background-color:#ACFA58;}
+ 30%{background-color:#298A08;}
+ 40%{background-color:#81F7D8;}
+ 50%{background-color:#088A68;}
+ 60%{background-color:#5882FA;}
+ 70%{background-color:#0B2161;}
+ 80%{background-color:#BE81F7;}
+ 90%{background-color:#170B3B;}
+ 100%{background-color:#424242;}
+
+}
+
+/* Styling only past here */
+html, body {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    background: #444;
+}
+body::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.outer {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+</style>
+</body>
+</html>
